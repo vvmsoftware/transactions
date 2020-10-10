@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "vvmsoftware\\Transactions\\": "src/"
+            "Vvmsoftware\\Transactions\\": "src/"
         }
     }
 }
