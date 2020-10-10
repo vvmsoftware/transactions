@@ -1,0 +1,20 @@
+{
+    "name": "vvmsoftware/transactions",
+    "description": "Provides transaction-like interface",
+    "type": "library",
+    "license": "Proprietary",
+    "authors": [
+        {
+            "name": "Valeri Markov",
+            "email": "val@vvmsoft.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "vvmsoftware\\Transactions\\": "src/"
+        }
+    }
+}
