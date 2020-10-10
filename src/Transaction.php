@@ -14,7 +14,7 @@ class Transaction implements TransactionItem
 {
     private Registry $registry;
     private array $items;
-    private \Exception $e;
+    private Exception $e;
     private int $rollBackIndex = 0;
 
     public function __construct()
@@ -41,7 +41,7 @@ class Transaction implements TransactionItem
                 if (!$item->commit($r)) {
                     $shouldRollBack = true;
                 }
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 $this->e = $e;
                 $shouldRollBack = true;
             }
@@ -68,5 +68,10 @@ class Transaction implements TransactionItem
             $currentIndex--;
         }
         return true;
+    }
+
+    public function getException(): \Exception
+    {
+        return $this->e;
     }
 }
