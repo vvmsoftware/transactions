@@ -54,8 +54,8 @@ class Transaction implements TransactionItem
                 }
                 return false;
             }
-            return true;
         }
+        return true;
     }
 
     public function rollback(RegistryInterface $r): bool
