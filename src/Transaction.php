@@ -62,7 +62,7 @@ class Transaction implements TransactionItem
     {
         $currentIndex = $this->rollBackIndex;
         while ($currentIndex > -1) {
-            if (!$this->items[$currentIndex]->rollback()) {
+            if (!$this->items[$currentIndex]->rollback($r)) {
                 return false;
             }
             $currentIndex--;
